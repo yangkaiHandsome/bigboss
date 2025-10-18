@@ -10,7 +10,7 @@ interface Message {
 }
 
 const openai = new OpenAI({
-  apiKey: 'sk-b09d80d9d82d4a2ebe5d050732a6cf88',
+  apiKey: 'sk-13d7a4f344424ac489acd3ef25350cce',
   baseURL: 'https://api.deepseek.com',
   dangerouslyAllowBrowser: true
 });
