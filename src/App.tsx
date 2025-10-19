@@ -314,7 +314,7 @@ const App: React.FC = () => {
         </div>
         
         <div className="sidebar-footer">
-          杨凯的专属AI助手
+        我是大老板群的专属AI助手
         </div>
       </div>
 
@@ -325,7 +325,7 @@ const App: React.FC = () => {
           <div className="chat-header">
             <div className="header-left">
               <div className="header-info">
-                <h3>杨凯的专属AI助手</h3>
+                <h3>我是大老板群的专属AI助手</h3>
                 <div className="status">在线</div>
               </div>
             </div>
@@ -391,7 +391,7 @@ const App: React.FC = () => {
               </button>
             </div>
             <div className="input-footer">
-              <span>杨凯的专属助手可以犯错，请注意核实重要信息。</span>
+              <span>我是大老板群的专属助手可以犯错，请注意核实重要信息。</span>
             </div>
           </div>
         </div>
