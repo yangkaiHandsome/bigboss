@@ -19,7 +19,7 @@ interface ChatHistory {
 
 const App: React.FC = () => {
   // 系统提示词
-  const SYSTEM_PROMPT = "你是杨凯的专属助手，请以专业、友好的态度提供帮助。";
+  const SYSTEM_PROMPT = import.meta.env.VITE_SYSTEM_PROMPT || "你是杨凯的专属助手，请以专业、友好的态度提供帮助。";
 
   // OpenAI客户端配置
   const openai = new OpenAI({
