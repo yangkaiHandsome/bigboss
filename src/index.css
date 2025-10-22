@@ -1,0 +1,62 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #ececf1;
+  background-color: #343541;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #07634c;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #1a7f64;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid #5c5c5c;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  color: #ececf1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2a2b32;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px auto #10a37f;
+}
+
+input, textarea {
+  font-family: inherit;
+}
