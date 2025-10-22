@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "envId": "{{envId}}",
+  "framework": {
+    "name": "my-blog",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "my-blog",
+          "servicePath": "/",
+          "localPath": "./",
+          "uploadType": "image",
+          "imageInfo": {
+            "imageUrl": "https://github.com/user/my-blog.git"
+          },
+          "containerPort": 80,
+          "envVariables": {},
+          "instanceNum": 1,
+          "cpu": 0.25,
+          "mem": 0.5,
+          "policyType": "cpu",
+          "policyThreshold": 60,
+          "minNum": 0,
+          "maxNum": 10,
+          "cpuThreshold": 60,
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}

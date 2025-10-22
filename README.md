@@ -1,74 +1,75 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# my-blog - 杨凯的专属AI助手
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是我学习的第一个代码项目，一个基于 React、TypeScript 和 Vite 构建的 AI 助手应用。
 
-Currently, two official plugins are available:
+## 功能特点
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 基于 OpenAI API 的聊天功能
+- 本地存储聊天历史
+- 响应式设计
+- 支持多轮对话
 
-## Expanding the ESLint configuration
+## 环境变量配置
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+在项目根目录创建 `.env` 文件，并配置以下环境变量：
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+VITE_OPENAI_API_KEY=your_api_key_here
+VITE_OPENAI_BASE_URL=https://api.deepseek.com
+VITE_SYSTEM_PROMPT=你是杨凯的专属助手，请以专业、友好的态度提供帮助。
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 开发
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. 安装依赖：
+   ```bash
+   npm install
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# my-blog
-这是我学习的第一个代码
->>>>>>> 74f25adadc4dab44099996c486356162fc2fe8ea
+2. 启动开发服务器：
+   ```bash
+   npm run dev
+   ```
+
+3. 构建生产版本：
+   ```bash
+   npm run build
+   ```
+
+## 部署到腾讯云 CloudBase
+
+1. 确保已安装 CloudBase CLI：
+   ```bash
+   npm install -g @cloudbase/cli
+   ```
+
+2. 登录 CloudBase：
+   ```bash
+   cloudbase login
+   ```
+
+3. 构建项目：
+   ```bash
+   npm run build
+   ```
+
+4. 部署到 CloudBase：
+   ```bash
+   cloudbase framework deploy
+   ```
+
+## Docker 部署
+
+项目包含 Dockerfile，可以构建 Docker 镜像进行部署：
+
+1. 构建镜像：
+   ```bash
+   docker build -t my-blog .
+   ```
+
+2. 运行容器：
+   ```bash
+   docker run -p 8080:80 my-blog
+   ```
+
+访问 http://localhost:8080 查看应用。
